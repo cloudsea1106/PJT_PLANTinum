@@ -4,14 +4,221 @@
   <img src="./README.assets/logo.png" width="60%">
 </div>
 
-**PLANTinum** 이란 **Plant + Platinum** 의 합성어입니다. 또한, **plan**을 의미하기도 해서 계획적으로 식물을 관리하고 보살핀다는 의미를 담고있습니다. 본 프로젝트는 반려식물을 자동으로 케어해주고 나아가 웹을 통하여 이렇게 기른 반려식물을 거래할 수 있게 만드는 **IoT 플랫폼 서비스** 개발을 목표로 합니다.
+
+**PLANTinum** 이란 **Plant**와 **Platinum**의 합성어입니다. 또한, **Plan**이라는 단어를 담고 계획적으로 식물을 관리하고 보살핀다는 의미를 나타냅니다. 본 프로젝트는 반려식물을 자동으로 케어해주고 나아가 웹을 통하여 반려식물을 거래할 수 있는  **IoT-플랫폼 서비스**를 제공합니다.
+Plantinum은 크게 두 가지 서비스로 이루어져 있습니다.
+
+
+## 1. IoT
+<img src="README.assets/main_pic_4.0010c2f3.jpg" width="65%">
+플랜티넘의 IoT 기기 Supool수풀입니다.
+Supool의 이름은 **나무와 식물이 우거진 곳**이라는 뜻의 수풀에서 유래했습니다.
+
+### 기능
+
+> 실시간으로 흙의 습도를 측정
+>
+> 자동 급수를 진행
+>
+> LED 식물등
+>
+> LCD 터치스크린을 통한 모니터링
+>
+> Plantinum, mySQL 웹과 연동
+
+
+### IoT 기기 구성
+
+
+<details>
+<summary > <b>기능 자세히 보기</b></summary>
+<div markdown="1">
+
+[Plantinum 디바이스 시연 영상](https://youtu.be/C1uGjrZCowk)
+
+<img src="README.assets/회로도.PNG" width="65%">
+
+> 사용 센서 : LCD, 모터 드라이브(L9110S), 워터펌프, DHT11, 네오픽셀 LED, 수위센서(접촉식), 토양수분센서, mcp3008(컨버터)
+> <img src="README.assets/supool_도면.PNG" width="65%">
+
+> supool 3D 도면
+
+</div>
+</details>
 
 
 
-보다 자세한 내용은 Wiki를 참고해 주세요.
+### LCD 화면 구성
 
-> [Wiki](https://lab.ssafy.com/s07-webmobile3-sub2/S07P12A109/-/wikis/home)
+<details>
+<summary > <b>기능 자세히 보기</b></summary>
+<div markdown="1">
 
+<img src="README.assets/supool_new_video.gif">
+
+> new 버튼 클릭 시 OTP 입력으로 WEB과 연동
+>
+> OTP는 웹의 내식물 상세 페이지에서 확인 가능 (Supool 연동)
+
+<img src="README.assets/supool_load_video.gif">
+
+> load 버튼 클릭 시 supool에 저장되어 있는 정보 불러오기
+
+<img src="README.assets/supool_main-detail.gif">
+
+> 메인 페이지에서 파도의 높이로 토양 습도 확인
+>
+> 디테일 페이지에서 주변환경의 온습도, 토양 수분, 최근 관수 시간, 물통 잔여량 확인
+
+<img src="README.assets/supool_goodnight.gif">
+
+> 절전모드 버튼 클릭 후 5초 뒤 절전모드
+>
+> 화면 터치 시 메인페이지로 이동
+
+</div>
+</details>
+
+<br>
+
+
+[상세 코드](https://github.com/cloudsea1106/PJT_PLANTinum/tree/main/HW/Supool) /
+[실행법](https://github.com/cloudsea1106/PJT_PLANTinum/blob/main/exec/%EA%B3%B5%ED%86%B5PJT_%EC%84%9C%EC%9A%B81%EB%B0%98_A109_%ED%8F%AC%ED%8C%85%EB%A7%A4%EB%89%B4%EC%96%BC.pdf) /
+[기술 스택](https://github.com/cloudsea1106/PJT_PLANTinum/blob/main/Docs/STACK_EXPLANATION.md)
+
+
+
+## 2. WEB
+
+웹은 크게 세 가지 서비스를 제공합니다.
+
+### 회원가입 및 프로필
+
+<details>
+<summary > <b>기능 자세히 보기</b></summary>
+<div markdown="1">
+
+<img src="README.assets/signup.gif">
+
+> 회원 가입
+>
+> 최초 회원가 입시 닉네임 자동 생성
+
+
+
+
+<img src="README.assets/profile.gif" style="width: 56%;">
+
+> 닉네임, 이메일, 연락처, 주소, 프로필 이미지 변경
+>
+> 회원가입 후 경과일 확인
+>
+> 작성한 판매, 구매 게시글 확인
+>
+> 회원 탈퇴
+
+
+
+
+<img src="README.assets/change_password.gif" style="width: 56%;">
+
+> 비밀번호 변경
+
+</div>
+</details>
+
+<br>
+
+### 내 식물
+
+<details>
+<summary > <b>기능 자세히 보기</b></summary>
+<div markdown="1">
+
+<img src="README.assets/my_plant_create.gif">
+
+> 식물 리스트로부터 식물 선택
+>
+> 존재하지 않는 식물은 사용자가 직접 작성
+>
+> 반려 식물의 닉네임 지정
+
+
+
+
+<img src="README.assets/myplant_detail.gif">
+
+> 계절별 관리 정보와 특별 관리 정보 제공
+>
+> SuPool 연결 버튼을 통해 60초 동안 임시 비밀번호 발급, IoT 기기와 웹페이지 연결
+>
+> 연결 후 웹페이지에서 토양습도와 최근 관수 날짜확인 가능
+
+
+
+
+<img src="README.assets/myplant_sort.gif">
+
+> 등록순, 이름순 조회
+> </div>
+> </details>
+
+<br>
+
+### 잎팔이
+
+<details>
+<summary > <b>기능 자세히 보기</b></summary>
+<div markdown="1">
+
+<img src="README.assets/leaf82_create.gif">
+
+> 판매, 구매 게시글 등록 및 조회
+
+
+
+
+<img src="README.assets/leaf82_search.gif">
+
+> 식물명, 지역별 게시글 검색
+>
+> 게시글은 20개씩 추가 조회
+
+
+
+<img src="README.assets/leaf82_chat.gif">
+
+> 거래자 간 채팅
+> </div>
+> </details>
+
+<br>
+<br>
+<br>
+
+<details>
+<summary > 상세 코드는 여기로 </summary>
+
+<div markdown="1">
+
+
+### (1) BE
+
+[상세 코드](https://github.com/cloudsea1106/PJT_PLANTinum/tree/main/BE) /
+[실행법](https://github.com/cloudsea1106/PJT_PLANTinum/blob/main/exec/%EA%B3%B5%ED%86%B5PJT_%EC%84%9C%EC%9A%B81%EB%B0%98_A109_%ED%8F%AC%ED%8C%85%EB%A7%A4%EB%89%B4%EC%96%BC.pdf) /
+[기술 스택](https://github.com/cloudsea1106/PJT_PLANTinum/blob/main/Docs/STACK_EXPLANATION.md)
+
+### (2) FE
+[상세 코드](https://github.com/cloudsea1106/PJT_PLANTinum/tree/main/FE/plantinum) /
+[실행법](https://github.com/cloudsea1106/PJT_PLANTinum/blob/main/exec/%EA%B3%B5%ED%86%B5PJT_%EC%84%9C%EC%9A%B81%EB%B0%98_A109_%ED%8F%AC%ED%8C%85%EB%A7%A4%EB%89%B4%EC%96%BC.pdf) /
+[기술 스택](https://github.com/cloudsea1106/PJT_PLANTinum/blob/main/Docs/STACK_EXPLANATION.md)
+
+
+</div>
+</details>
+
+
+---
 
 
 ## 💾설치
