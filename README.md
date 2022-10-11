@@ -36,10 +36,10 @@ Supool의 이름은 **나무와 식물이 우거진 곳**이라는 뜻의 수풀
 
 [Plantinum 디바이스 시연 영상](https://youtu.be/C1uGjrZCowk)
 
-<img src="README.assets/회로도.PNG" width="65%">
+<img src="README.assets/회로도.png" width="65%">
 
 > 사용 센서 : LCD, 모터 드라이브(L9110S), 워터펌프, DHT11, 네오픽셀 LED, 수위센서(접촉식), 토양수분센서, mcp3008(컨버터)
-> <img src="README.assets/supool_도면.PNG" width="65%">
+> <img src="README.assets/supool_도면.png" width="65%">
 
 > supool 3D 도면
 
